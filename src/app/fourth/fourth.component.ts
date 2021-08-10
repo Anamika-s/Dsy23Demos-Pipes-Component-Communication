@@ -9,11 +9,18 @@ export class FourthComponent implements OnInit {
 
  name:string="Lalit Rai";
  msg : string="";
+ message : string ="";
   onClick(){
      console.log("Button is clicked");
      this.msg="You have clicked";
     // return "Hello " + this.name;
   }
+
+  onClick1(event){
+    console.log("Button is clicked");
+    this.message= "You have selected " + event.target.value;
+   // return "Hello " + this.name;
+ }
 
   onInputClick(event)
   {
@@ -22,10 +29,10 @@ export class FourthComponent implements OnInit {
 
 
   }
-  message : string =""; 
-  onClick1(event)
+
+  OnClick2(name)
   {
-    this.message ="You have seleted " + event.target.value;
+    this.message = "Hello " + name.value;
   }
   constructor() { }
 
