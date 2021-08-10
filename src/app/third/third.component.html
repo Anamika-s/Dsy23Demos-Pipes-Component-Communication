@@ -1,0 +1,14 @@
+<p>third works!</p>
+
+
+<div class="box" [class.myClass]="myProp"> Div 1 </div>
+
+<div class="box" [class.myClass]="myProp" [style.margin] ="myProp1"> Div 1 </div>
+
+
+<div class="box" [class.myClass]="myProp" [style.margin] = "isActive?myProp1:'5px'" > Div 1 </div>
+
+<div [ngClass] ="'class1 class2 class3'" > DIV 100 </div>
+
+
+<div [ngClass] ="multiClasses" > DIV 200 </div>
