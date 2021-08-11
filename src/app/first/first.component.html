@@ -1,46 +1,22 @@
-<p>first works!</p>
-<h1> heading </h1>
-{{name}}
-<br> 
-Hello {{name}}
-<br> <br>
-{{ 6 * 7 }}
+ 
+ {{name}}
+ {{name | lowercase}}
+ <br> 
+ {{name | uppercase}}
 
+ <b>{{6589.23 | currency:"USD"}}</b><br/>
+ <b>{{6589.23 | currency:"USD":true}}</b> 
+ <b>{{todaydate}}</b><br/>
+ <b>{{todaydate | date:'d/M/y'}}</b><br/>
+ <b>{{todaydate | date:'shortTime'}}</b>
 
-<br>
-<br>
+ <h1>Decimal Pipe</h1>
+ <b>{{ 454.78787814 | number: '3.4-4' }}</b> // 3 is for main integer, 4 -4 are for integers to be displayed.
+ <h1>Percent Pipe</h1>
+ <b>{{00.54565 | percent}}</b>
 
-{{ "Welcome" + ' ' + name}}
-<br> <br>
-{{name.length}}
-<br> 
-{{name.toUpperCase()}}
-
-{{GetName()}}
-<br>
-<br>
-<font color="red">My App Status : {{Status? status1 :status2}}
-</font>
-
-
-<pre>
-Operator : which acts upon operands
-+ - * /
-
-2 + 7 , Here 2 & 7 are operands
-+ Operator
-Depending upon no of operands, opeartors are 
-
-1. Unary opeartor (which acts upon single operand)
--9      ++7
-2. Binary opeartor (which acts upon 2 operand)
- 8 * 9 , 9/2
-3. Ternary opeartor (which acts upon three operand)
-?:
-condition? if its true : if its false
-if else 
-
-</pre>
-
-
-
+ <h1>Slice Pipe</h1>
+ <b>{{months | slice:2:6}}</b> 
+ // here 2 and 6 refers to the start and the end index
+ <h1>Json Pipe</h1>
+ <b>{{ jsonval | json }}</b>

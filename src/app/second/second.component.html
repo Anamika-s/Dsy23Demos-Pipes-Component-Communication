@@ -1,29 +1,21 @@
-<p>second works!</p>
+<h1> Employees List </h1>
 
-<input type="text" name="" id="" value="{{name}}"/>
+<table class="table table-striped">
+  <thead>
+    <th> Code </th>
+    <th> Name </th>
+    <th> Gender </th>
+    <th> Salary </th>
+    <th> Date of Birth  </th>
 
-<input type="text" name="" id="" [value] = name/>
-
-<input type="text" name="" id="" bind-value = name/>
-
-<input type="text" disabled name="" id="">
-
-<input type="text" disabled="false" name="" id="">
-<input type="text" [disabled]="enable" name="" id="">
-
-<input type="text" [disabled]="enable" name="" id="">
-
-<br> 
-Text Box will be hidden
-<input type="text" [hidden]="!enable" name="" id="">
-<br> 
-My App Status is :  
-<input type="text" name="" id="" [value]="Status?status1:status2"/> 
-
-
-
-
-
-
-
-
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of employees">
+      <td> {{x.code | uppercase}} </td>
+      <td> {{x.name |  Gender:x.gender}} </td>
+      <td> {{x.gender}} </td>
+      <td> {{x.annualSalary |currency :"USD"}} </td>
+      <td> {{x.dateOfBirth | date : "fullDate" | uppercase}} </td>
+    </tr>
+  </tbody>
+</table>
